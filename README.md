@@ -2,15 +2,19 @@ testGovernor Hardhat Project
 =======================
 
 npm install @openzeppelin/contracts  
+npm install --save-dev hardhat
+npm install --save-dev "@nomiclabs/hardhat-ethers@^2.0.0
+npm install --save-dev @nomiclabs/hardhat-etherscan
+npm install web3  
 <!-- npm install @chainlink/contracts --save   -->
-npm install --save-dev @nomiclabs/hardhat-etherscan   
-npm i @nomiclabs/hardhat-waffle   
+npm i @nomiclabs/ethereum-waffle@^3.2.0   
+ npm i ethereum-waffle
 npm install --save-dev @nomiclabs/hardhat-ethers 'ethers@\^5.0.0'   
 npm install --dotenv-extended  
-<!-- npm i hardhat-gas-reporter    -->
-<!-- npm i solidity-coverage    -->
-<!-- npm i fs    -->
-<!-- npm i aws-sdk -->
+npm i hardhat-gas-reporter   
+npm i solidity-coverage   
+npm i fs   
+npm i aws-sdk
 
 <!-- deploy and verify contracts -->
 npx hardhat clean   
