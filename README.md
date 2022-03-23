@@ -2,15 +2,20 @@ testGovernor Hardhat Project
 =======================
 
 npm install @openzeppelin/contracts  
+npm install @openzeppelin/contracts-upgradeable  
+npm install --save-dev @openzeppelin/test-helpers
+npm install --save-dev @nomiclabs/hardhat-web3 web3
 <!-- npm install @chainlink/contracts --save   -->
-npm install --save-dev @nomiclabs/hardhat-etherscan   
 npm i @nomiclabs/hardhat-waffle   
-npm install --save-dev @nomiclabs/hardhat-ethers 'ethers@\^5.0.0'   
-npm install --dotenv-extended  
-<!-- npm i hardhat-gas-reporter    -->
-<!-- npm i solidity-coverage    -->
-<!-- npm i fs    -->
-<!-- npm i aws-sdk -->
+npm install --save-dev @nomiclabs/hardhat-ethers 'ethers@\^5.0.0'  
+npm i @nomiclabs/hardhat-etherscan 
+<!-- npm install --dotenv -extended   -->
+npm install dotenv 
+npm i hardhat-gas-reporter   
+npm i solidity-coverage   
+npm i fs  
+npm i aws-sdk  
+
 
 <!-- deploy and verify contracts -->
 npx hardhat clean   
@@ -24,6 +29,8 @@ deploy parameters and deployed addresses are saved in scripts/deployParams.json
 verify a single contract:
 npx hardhat verify --network rinkeby --contract contracts/Mooney.sol:Mooney  <your deployed address> 
 -->
-```
+
+
 Contracts
-=========
+=======================
+
