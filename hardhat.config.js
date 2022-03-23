@@ -20,7 +20,11 @@ module.exports = {
     settings: {
       optimizer: {
         enabled: true,
+<<<<<<< HEAD
         runs: 300
+=======
+        runs: 1000
+>>>>>>> 4fc7e3ea7971fba48525a2d5ae2960d3f127994a
       }
     }
   },

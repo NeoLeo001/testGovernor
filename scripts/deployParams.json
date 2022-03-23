@@ -1,4 +1,9 @@
 {
+<<<<<<< HEAD
     "name": "testMyGovernor",
     "myGovernorAddr": "0x733a1C1677CE166f3C43Cb23aaf277418079eF64"
+=======
+    "name": "testMyGov",
+    "myTokenAddr": "0x57E760663C00E54969a17cF03e4893CC0D2C5Cb4"
+>>>>>>> 4fc7e3ea7971fba48525a2d5ae2960d3f127994a
 }

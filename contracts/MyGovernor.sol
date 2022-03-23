@@ -3,6 +3,7 @@
 // https://docs.openzeppelin.com/contracts/4.x/governance
 pragma solidity ^0.8.4;
 
+<<<<<<< HEAD
 import "@openzeppelin/contracts-upgradeable/governance/GovernorUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/governance/extensions/GovernorSettingsUpgradeable.sol";
 import "@openzeppelin/contracts-upgradeable/governance/extensions/GovernorCountingSimpleUpgradeable.sol";
@@ -34,6 +35,22 @@ contract MyGovernor is Initializable, GovernorUpgradeable, GovernorSettingsUpgra
         internal
         onlyOwner
         override
+=======
+import "@openzeppelin/contracts/governance/Governor.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorSettings.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorCountingSimple.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorVotes.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorVotesQuorumFraction.sol";
+import "@openzeppelin/contracts/governance/extensions/GovernorTimelockControl.sol";
+
+contract MyGovernor is Governor, GovernorSettings, GovernorCountingSimple, GovernorVotes, GovernorVotesQuorumFraction, GovernorTimelockControl {
+    constructor(IVotes _token, TimelockController _timelock)
+        Governor("MyGovernor")
+        GovernorSettings(1 /* 1 block */, 23 /* 5 minutes */, 100e18)
+        GovernorVotes(_token)
+        GovernorVotesQuorumFraction(4)
+        GovernorTimelockControl(_timelock)
+>>>>>>> 4fc7e3ea7971fba48525a2d5ae2960d3f127994a
     {}
 
     // The following functions are overrides required by Solidity.
@@ -77,7 +94,11 @@ contract MyGovernor is Initializable, GovernorUpgradeable, GovernorSettingsUpgra
     function state(uint256 proposalId)
         public
         view
+<<<<<<< HEAD
         override(GovernorUpgradeable, GovernorTimelockControlUpgradeable)
+=======
+        override(Governor, GovernorTimelockControl)
+>>>>>>> 4fc7e3ea7971fba48525a2d5ae2960d3f127994a
         returns (ProposalState)
     {
         return super.state(proposalId);
@@ -85,7 +106,11 @@ contract MyGovernor is Initializable, GovernorUpgradeable, GovernorSettingsUpgra
 
     function propose(address[] memory targets, uint256[] memory values, bytes[] memory calldatas, string memory description)
         public
+<<<<<<< HEAD
         override(GovernorUpgradeable, IGovernorUpgradeable)
+=======
+        override(Governor, IGovernor)
+>>>>>>> 4fc7e3ea7971fba48525a2d5ae2960d3f127994a
         returns (uint256)
     {
         return super.propose(targets, values, calldatas, description);
@@ -127,7 +152,11 @@ contract MyGovernor is Initializable, GovernorUpgradeable, GovernorSettingsUpgra
     function supportsInterface(bytes4 interfaceId)
         public
         view
+<<<<<<< HEAD
         override(GovernorUpgradeable, GovernorTimelockControlUpgradeable)
+=======
+        override(Governor, GovernorTimelockControl)
+>>>>>>> 4fc7e3ea7971fba48525a2d5ae2960d3f127994a
         returns (bool)
     {
         return super.supportsInterface(interfaceId);
